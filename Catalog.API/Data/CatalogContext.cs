@@ -16,7 +16,7 @@ namespace Catalog.API.Data
             Products = dataBase.GetCollection<ProductEntity>(configuration.GetValue<string>
                 ("DatabaseSettings:CollectionName"));
 
-            CatalogContextSeed.SeedData(ProductEntity);
+            CatalogContextSeed.SeedData(Products);
         }
         public IMongoCollection<ProductEntity> Products { get; }
     }
